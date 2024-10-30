@@ -1,0 +1,130 @@
+/* General styling for body */
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    width: 100%;
+}
+
+/* Top bar */
+.top-bar {
+    background-color: #0c0c2c;
+    color: white;
+    padding: 10px 30px;
+    font-size: 14px;
+}
+
+.contact-info {
+    margin-left: 100px;
+    display: flex; /* Use flexbox */
+    justify-content: left; /* Centers the items horizontally */
+    gap: 80px; /* Adjusts space between items (adjust value as needed) */
+}
+
+
+.contact-info span {
+    scale: 1.2;
+}
+
+/* Main navigation */
+.main-nav {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border-bottom: 0px solid #e70000;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.nav-links li {
+    margin-right: 20px;
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #0c0c2c;
+    font-weight: 600;
+    padding: 5px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #e70000;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: rgb(218, 0, 0);
+}
+
+
+
+.quote-btn {
+    background-color: rgb(218, 0, 0);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.quote-btn:hover {
+    background-color: rgb(218, 0, 0);
+    transform: scale(1.05);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .top-bar {
+        flex-direction: column;
+    }
+}
+
+
+.circle {
+    height: 24px;
+    width: 24px;
+    border-radius: 24px;
+    background-color: black;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99999999; /* so that it stays on top of all other elements */
+    opacity: 50%;
+    }
