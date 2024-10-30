@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality Exterior Solutions | Springfield, MO</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        .phone-icon {
+            scale: 1.5;
+            margin-right: 5px;
+            padding-right: 8px;
+        }
+
+        .navbar-custom {
+            background: linear-gradient(to right, #003399, #001f5e);
+        }
+        .navbar-custom .nav-link {
+            color: white;
+            font-weight: bold;
+            position: relative;
+            padding-bottom: 5px;
+            transition: color 0.3s;
+        }
+        .navbar-custom .nav-link:hover {
+            color: #ffffff;
+        }
+        /* Underline animation */
+        .navbar-custom .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+            transform-origin: bottom right;
+        }
+        .navbar-custom .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        
+        .top-bar {
+            background-color: white;
+            padding: 10px 0;
+        }
+        .contact-info {
+            font-size: 0.9rem;
+            color: gray;
+        }
+        .contact-info a {
+            color: #003399;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .contact-button {
+            border: 2px solid #003399;
+            color: #003399;
+            font-weight: bold;
+        }
+        .contact-button:hover {
+            background-color: #003399;
+            color: white;
+        }
+
+        .hero {
+            position: relative;
+            color: rgb(255, 255, 255);
+            background-color: rgba(0, 0, 0, 0.5);
+            height: 380px;
+            padding: 7%;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('src/hero.jpg'); /* Replace with your actual path */
+            background-size: cover;
+            background-position: center;
+            z-index: -1; /* Keep it behind the text */
+        }
+
+
+        .btn:hover{
+            background-color: #003399;
+            color: white;
+            border-color: #ffffff;
+            transform: scale(1.2);
+            transition: 0.3s ease-in-out;
+
+        }
+
+        .service-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Shadow around the card */
+        }
+
+
+        .service-card:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Darker shadow on hover */
+        }
+
+
+
+        .carousel-inner {
+            padding: 12px; /* Adjust this value as needed */
+        }
+
+        #about-us {
+            display: flex; /* Use flexbox for the section */
+            align-items: flex-start; /* Align items to the top */
+        }
+
+        .about-us {
+            flex: 1; /* Allow the text section to take available space */
+            padding-right: 20px; /* Add space between text and image */
+        }
+
+        .img1 {
+            flex: 1; /* Allow the image section to take available space */
+            display: flex;
+            justify-content: flex-end; /* Align image to the right */
+        }
+
+        .img1 img {
+            max-width: 100%; /* Make sure the image is responsive */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+
+        .feature-icon {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .feature-icon:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon i {
+            color: #c0392b; /* Red color for icons */
+        }
+
+        /* Loading Screen */
+        #loading {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: white;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s ease; /* Smooth fade-out effect */
+        }
+
+        .loading-circle {
+            border: 8px solid #c0392b;
+            border-top: 8px solid transparent;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+
+        @media (max-width: 800px) {
+            .top-bar {
+                display: none;
+            }
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loading">
+        <div class="loading-circle"></div>
+    </div>
+
+    <!-- Navbar -->
+    <!-- Top White Bar -->
+    <div class="top-bar">
+        <div class="container d-flex justify-content-between align-items-center">
+        <!-- Brand logo and title -->
+        <div class="d-flex align-items-center">
+            <!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Lightning_bolt_icon_%28bold%29.svg/2048px-Lightning_bolt_icon_%28bold%29.svg.png" alt="Logo" width="30" height="auto" class="me-2">-->
+            <div>
+            <a href="index.html" class="nav-link"><h4 class="fw-bold">Quality Exterior Solutions</h4></a>
+            </div>
+        </div>
+        
+        <!-- Contact Info -->
+        <div id="contact-info-dis" class="contact-info d-flex align-items-center">
+            <i class="fa-solid fa-phone  phone-icon"></i>
+            <div class="me-4">
+            <span>Call Us Anytime</span><br>
+            <a href="tel:4177550026" style="font-size: large;">417-755-0026</a>
+            </div>
+            <a href="#" class="btn contact-button">Contact Us</a>
+        </div>
+        </div>
+    </div>
+
+    <!-- Bottom Blue Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item me-3">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item me-3">
+                  <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item me-3">
+                  <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item me-3">
+                  <a class="nav-link" href="#">Contact</a>
+                </li>
+              </ul>              
+        </div>
+        </div>
+    </nav>
+    
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1 data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"  class="display-4">Quality Exterior Solutions</h1>
+            <p data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"  class="lead">Your Trusted Partner for Gutters, Siding, and Soffits in Springfield, MO</p>
+            <a data-aos="fade-left" href="#services" class="btn btn-light btn-lg">Our Services</a>
+        </div>
+    </header>
+
+    <!-- About Us Section -->
+    <section id="about-us" class="py-5">
+        <div class="container d-flex align-items-start">
+            <div class="about-us" style="width: 50%;">
+                <h2 class="text-center mb-5">Who We Are</h2>
+                <p>
+                    At Quality Exterior Solutions, based in Springfield, MO, we are dedicated to enhancing the beauty and functionality of your home. With years of experience in the industry, our expert team specializes in providing top-notch siding, gutter, and soffit services tailored to meet the unique needs of each client. We pride ourselves on our commitment to quality craftsmanship, using only the best materials to ensure long-lasting results. Our mission is to create durable and aesthetically pleasing exterior solutions that not only protect your home but also elevate its curb appeal. At Quality Exterior Solutions, we believe in building lasting relationships with our customers through transparency, reliability, and exceptional service.
+                </p>
+            </div>
+            <div class="img1" style="width: 50%;">
+                <img src="src/gutter_install.jpg" alt="Gutter Installation" style="width: 100%; height: auto;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container" data-aos="fade-up">
+            <h2 class="text-center mb-5">Our Services</h2>
+            <div id="serviceCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row text-center">
+                            <div class="col-md-4 mb-4">
+                                <div class="service-card p-4 rounded ">
+                                    <i class="fas fa-home fa-3x mb-3" style="color: #c0392b;"></i>
+                                    <h5>Siding Installation</h5>
+                                    <p>Transform your home's exterior with our quality siding solutions.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="service-card p-4 rounded ">
+                                    <i class="fas fa-tint fa-3x mb-3" style="color: #c0392b;"></i>
+                                    <h5>Gutter Installation</h5>
+                                    <p>Protect your home from water damage with our efficient gutter systems.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="service-card p-4 rounded ">
+                                    <i class="fas fa-clipboard-list fa-3x mb-3" style="color: #c0392b;"></i>
+                                    <h5>Soffit Installation</h5>
+                                    <p>Enhance ventilation and curb appeal with our soffit solutions.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row text-center">
+                            <div class="col-md-4 mb-4">
+                                <div class="service-card p-4 rounded ">
+                                    <i class="fa-solid fa-house fa-3x mb-3" style="color: #c0392b;"></i>
+                                    <h5>Roofing Services</h5>
+                                    <p>Ensure the safety of your home with our reliable roofing services.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="service-card p-4  rounded ">
+                                    <i class="fas fa-tools fa-3x mb-3" style="color: #c0392b;"></i>
+                                    <h5>Custom Solutions</h5>
+                                    <p>We offer tailored solutions to meet your specific exterior needs.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="service-card p-4  rounded ">
+                                    <i class="fas fa-comments fa-3x mb-3" style="color: #c0392b;"></i>
+                                    <h5>Consultation Services</h5>
+                                    <p>Get expert advice on your next exterior project from our specialists.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Move the controls here -->
+                <div class="carousel-controls">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#serviceCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#serviceCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Client Testimonials Section -->
+    <!--<section id="testimonials" class="py-5">
+        <div class="container" data-aos="fade-up">
+            <h2 class="text-center mb-5">What Our Clients Say</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">John Doe</h5>
+                            <p class="card-text">"Excellent service! My house looks amazing after the new siding installation!"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Jane Smith</h5>
+                            <p class="card-text">"Professional and efficient! The team did a great job with my gutters."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Bob Johnson</h5>
+                            <p class="card-text">"Highly recommend! They transformed the look of my home."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+    <!-- Why Choose Us Section -->
+    <section id="why-choose-us" class="py-5 bg-light">
+        <div class="container" data-aos="fade-up">
+            <h2 class="text-center mb-5">Why Choose Us?</h2>
+            <p class="text-center mb-4">At Quality Exterior Solutions, we are committed to providing top-quality services to enhance the beauty and safety of your home. Here are a few reasons why our clients trust us:</p>
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs fa-3x mb-3"></i>
+                        <h5>Experienced Professionals</h5>
+                        <p>Our team brings over 15 years of experience, ensuring exceptional service on every project.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-icon">
+                        <i class="fas fa-thumbs-up fa-3x mb-3"></i>
+                        <h5>Quality Materials</h5>
+                        <p>We use only the highest quality materials for all our projects to guarantee durability and performance.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-5">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments fa-3x mb-3"></i>
+                        <h5>Customer Satisfaction</h5>
+                        <p>Your satisfaction is our priority. We work closely with you to meet your specific needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <!--<section id="faq" class="py-5">
+        <div class="container" data-aos="fade-up">
+            <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What types of services do you offer?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We offer a variety of services including gutter installation, siding installation, soffit installation, roofing, and more.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Are you licensed and insured?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, we are fully licensed and insured for all the services we provide.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            How can I get a quote?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            You can get a quote by contacting us through the form in the Contact section or by calling us directly.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container" data-aos="fade-up">
+            <h2 class="text-center mb-5">Contact Us</h2>
+            <form>
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group mb-4">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2024 Quality Exterior Solutions. All Rights Reserved.</p>
+            <p>Follow us on:
+                <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+            window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loading');
+            loadingScreen.style.opacity = '1'; // Make sure it's fully visible
+            setTimeout(() => {
+                loadingScreen.style.opacity = '0'; // Fade out
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none'; // Hide completely after fading out
+                }, 500); // Match this duration with the CSS transition duration
+            }, 100); // Optional delay before starting the fade-out
+        });
+
+        AOS.init(); // Initialize AOS for animations
+    </script>
+    <script>
+                // Change navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+    </script>
+    <script>
+        // Toggle rotation on navbar-toggler
+        const toggler = document.querySelector('.navbar-toggler');
+
+        toggler.addEventListener('click', function() {
+            toggler.classList.toggle('collapsed');
+        });
+
+    </script>
+</body>
+</html>
