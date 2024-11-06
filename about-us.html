@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Quality Exterior Solutions</title>
+    <link rel="stylesheet" href="css/each-page-style.css"> <!-- Link to your custom CSS if needed -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=window" />
+       <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YPQW67JH3P"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-YPQW67JH3P');
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <!-- Loading Screen -->
+    <div id="loading">
+        <div class="loading-circle"></div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+
+    <!-- Navbar -->
+    <!-- Top White Bar -->
+    <div class="top-bar">
+        <div class="container d-flex justify-content-between align-items-center">
+        <!-- Brand logo and title -->
+        <div class="d-flex align-items-center">
+            <!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Lightning_bolt_icon_%28bold%29.svg/2048px-Lightning_bolt_icon_%28bold%29.svg.png" alt="Logo" width="30" height="auto" class="me-2">-->
+            <div>
+            <a href="index.html" class="nav-link"><h4 class="fw-bold">Quality Exterior Solutions</h4></a>
+            </div>
+        </div>
+        
+        <!-- Contact Info -->
+        <div id="contact-info-dis" class="contact-info d-flex align-items-center">
+            <i class="fa-solid fa-phone  phone-icon"></i>
+            <div class="me-4">
+            <span>Call Us Anytime</span><br>
+            <a href="tel:417-252-7784" style="font-size: large;">417-252-7784</a>
+            </div>
+            <a href="#" class="contact-button">Contact Us</a>
+        </div>
+        </div>
+    </div>
+
+    <!-- Bottom Blue Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span><i class="fa-solid fa-bars" style="color: #ffffff;"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item me-3">
+                <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item me-3">
+                <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item me-3">
+                <a class="nav-link" href="service-page.html">Services</a>
+                </li>
+                <li class="nav-item me-3">
+                <a class="nav-link" href="contact-us.html">Contact Us</a>
+                </li>
+            </ul>              
+        </div>
+        </div>
+    </nav>
+
+
+    <!-------Hero Section v1.5------->
+
+    <div class="hero">
+        <img src="src/IMG_6584.jpeg" alt="Hero Image" class="hero-image" data-aos="fadeIn">
+        <div class="hero-caption">
+            <div class="caption-bg" data-aos="fade-right">
+                <h1>Quality Exterior Solutions</h1>
+                <h2>Our Services</h2>
+                <ul class="hero-benefits">
+                    <li>High-quality, durable materials for lasting results</li>
+                    <li>Expert craftsmanship tailored to your home</li>
+                    <li>Comprehensive exterior solutions: siding, gutters, and more</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Down Arrow Button -->
+        <a href="#services" class="down-arrow-btn">
+            <i class="fa-solid fa-arrow-down"></i>
+        </a>
+    </div>
+    
+    
+    <style>
+        /* Hero Section Container */
+
+        .hero-benefits {
+            list-style-type: none;
+            padding: 0;
+            color: #e0e0e0;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .hero-benefits li {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-benefits li:before {
+            content: "✓";
+            color: #00bfa6; /* Accent color for checkmark */
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            height: 620px;
+        }
+
+        /* Background Image Styling */
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+        }
+
+        /* Gradient Overlay */
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120%;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.774), rgba(0, 0, 0, 0));
+            z-index: 1;
+        }
+
+        /* Caption Styling */
+        .hero-caption {
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            transform: translateY(-50%);
+            z-index: 2;
+            text-align: left; /* Align text to the left */
+            color: #fff;
+            max-width: 700px; /* Optional: limit the width of the text */
+        }
+
+
+        /* Heading and Paragraph Styling */
+        .hero-caption h1 {
+            font-size: 2.8em;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .hero-caption p {
+            font-size: 1.2em;
+            line-height: 1.5;
+            color: #e0e0e0;
+        }
+
+        /* Down Arrow Button Styling */
+        .down-arrow-btn {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            font-size: 2rem;
+            color: #ffffff;
+            text-decoration: none;
+            animation: jump 2s ease-in-out infinite; /* Animation added here */
+            z-index: 1100;  /* High z-index to ensure it's clickable */
+            
+        }
+
+        .down-arrow-btn:hover {
+            transform: translateY(5px);
+            transition: 0.2s ease-in-out;
+            color: #0056b3;
+        }
+
+        .down-arrow-btn i {
+            display: block;
+            text-align: center;
+        }
+
+        /* Jumping Animation */
+        @keyframes jump {
+            0% {
+                transform: translateY(0);
+            }
+            25% {
+                transform: translateY(-10px); /* Move up */
+            }
+            50% {
+                transform: translateY(0); /* Back to original */
+            }
+            75% {
+                transform: translateY(-10px); /* Move up again */
+            }
+            100% {
+                transform: translateY(0); /* Back to original */
+            }
+        }
+
+    </style>
+    
+    
+    
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark text-white text-center">
+        <div class="container">
+            <!-- Company Name and Tagline -->
+            <h3 class="mb-2">Quality Exterior Solutions</h3>
+            <p class="small mb-4">Transforming homes with durable siding, gutters, and soffits.</p>
+
+            <!-- Contact Information -->
+            <div class="d-flex justify-content-center align-items-center mb-3">
+                <div class="mx-3">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Springfield, MO</span>
+                </div>
+                <div class="mx-3">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+1 (417)-252-7784</span>
+                </div>
+                <div class="mx-3">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:qualityexteriorsolutions.llc@gmail.com" class="text-white">qualityexteriorsolutions.llc@gmail.com</a>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="bg-secondary" style="width: 50%; margin: 20px auto;">
+
+            <!-- Copyright and Links -->
+            <div class="small">
+                <p class="mb-1">&copy; 2024 Quality Exterior Solutions. All Rights Reserved.</p>
+                <p class="mb-0">
+                    <a href="#" class="text-white">Privacy Policy</a> | 
+                    <a href="#" class="text-white">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+            window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loading');
+            loadingScreen.style.opacity = '1'; // Make sure it's fully visible
+            setTimeout(() => {
+                loadingScreen.style.opacity = '0'; // Fade out
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none'; // Hide completely after fading out
+                }, 1000); // Match this duration with the CSS transition duration
+            }, 1500); // Optional delay before starting the fade-out
+        });
+
+        AOS.init(); // Initialize AOS for animations
+    </script>
+
+    <script>
+        // Toggle rotation on navbar-toggler
+        const toggler = document.querySelector('.navbar-toggler');
+
+        toggler.addEventListener('click', function() {
+            toggler.classList.toggle('collapsed');
+        });
+
+    </script>
+    <script>
+        // Show the button when scrolling down a certain amount
+        window.onscroll = function() {
+            const scrollToTopButton = document.querySelector('.scroll-to-top');
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollToTopButton.classList.add('show');
+            } else {
+                scrollToTopButton.classList.remove('show');
+            }
+        };
+
+        // Scroll smoothly to the top
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+    </script>
+    <!-- AOS JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 2000, // Animation duration in milliseconds
+            once: true // Animates only once when scrolled into view
+        });
+    </script>
+</body>
+</html>
