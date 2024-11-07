@@ -18,11 +18,11 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YPQW67JH3P"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    gtag('config', 'G-YPQW67JH3P');
+        gtag('config', 'G-YPQW67JH3P');
     </script>
 </head>
 <body>
@@ -74,7 +74,7 @@
                 <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item me-3">
-                <a class="nav-link" href="#">About Us</a>
+                <a class="nav-link" href="./about-us.html">About Us</a>
                 </li>
                 <li class="nav-item me-3">
                 <a class="nav-link" href="service-page.html">Services</a>
@@ -94,25 +94,34 @@
         <img src="src/IMG_6584.jpeg" alt="Hero Image" class="hero-image" data-aos="fadeIn">
         <div class="hero-caption">
             <div class="caption-bg" data-aos="fade-right">
-                <h1>Quality Exterior Solutions</h1>
-                <h2>Our Services</h2>
+                <h1>About Us</h1>
+                <h2>Quality Exterior Solutions</h2>
+                <p class="just-text">We are a trusted provider of high-quality exterior solutions that enhance the beauty and functionality of your home. Our experienced team specializes in siding, gutters, and soffits installation, using only the best materials available.</p>
                 <ul class="hero-benefits">
-                    <li>High-quality, durable materials for lasting results</li>
-                    <li>Expert craftsmanship tailored to your home</li>
-                    <li>Comprehensive exterior solutions: siding, gutters, and more</li>
+                    <li>Top-notch materials for long-lasting results</li>
+                    <li>Expert craftsmanship and attention to detail</li>
+                    <li>Comprehensive exterior services tailored to your home</li>
                 </ul>
             </div>
         </div>
         <!-- Down Arrow Button -->
-        <a href="#services" class="down-arrow-btn">
+        <a href="#about-us" class="down-arrow-btn">
             <i class="fa-solid fa-arrow-down"></i>
         </a>
     </div>
     
-    
     <style>
-        /* Hero Section Container */
 
+        @media (max-width: 413px){
+            .hero::before{
+                background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.636));
+            }
+            .just-text{
+                display: none;
+            }
+
+        }
+        /* Hero Section Container */
         .hero-benefits {
             list-style-type: none;
             padding: 0;
@@ -120,34 +129,33 @@
             margin-bottom: 15px;
             font-size: 1.1em;
         }
-
+    
         .hero-benefits li {
             margin: 10px 0;
             display: flex;
             align-items: center;
         }
-
+    
         .hero-benefits li:before {
             content: "✓";
             color: #00bfa6; /* Accent color for checkmark */
             font-weight: bold;
             margin-right: 8px;
         }
-
+    
         .hero {
             position: relative;
             overflow: hidden;
             height: 620px;
         }
-
+    
         /* Background Image Styling */
         .hero-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            
         }
-
+    
         /* Gradient Overlay */
         .hero::before {
             content: "";
@@ -159,7 +167,7 @@
             background: linear-gradient(to right, rgba(0, 0, 0, 0.774), rgba(0, 0, 0, 0));
             z-index: 1;
         }
-
+    
         /* Caption Styling */
         .hero-caption {
             position: absolute;
@@ -171,8 +179,7 @@
             color: #fff;
             max-width: 700px; /* Optional: limit the width of the text */
         }
-
-
+    
         /* Heading and Paragraph Styling */
         .hero-caption h1 {
             font-size: 2.8em;
@@ -181,13 +188,14 @@
             margin-bottom: 15px;
             letter-spacing: 1px;
         }
-
+    
         .hero-caption p {
             font-size: 1.2em;
             line-height: 1.5;
             color: #e0e0e0;
+            margin-bottom: 20px; /* Space between paragraph and list */
         }
-
+    
         /* Down Arrow Button Styling */
         .down-arrow-btn {
             position: absolute;
@@ -198,20 +206,19 @@
             text-decoration: none;
             animation: jump 2s ease-in-out infinite; /* Animation added here */
             z-index: 1100;  /* High z-index to ensure it's clickable */
-            
         }
-
+    
         .down-arrow-btn:hover {
             transform: translateY(5px);
             transition: 0.2s ease-in-out;
             color: #0056b3;
         }
-
+    
         .down-arrow-btn i {
             display: block;
             text-align: center;
         }
-
+    
         /* Jumping Animation */
         @keyframes jump {
             0% {
@@ -231,12 +238,283 @@
             }
         }
 
-    </style>
-    
-    
-    
 
-    <!-- Footer -->
+    </style>
+
+    <!------- About us Sectio v1.0 ------->
+
+    <section class="about-us" id="about-us" data-aos="fade-up">
+        <div class="about-content">
+          <h2>About Us</h2>
+          <p>Welcome to <span class="highlight">Quality Exterior Solutions</span>, where we provide exceptional siding, gutter, and soffit services with a commitment to quality and professionalism. Our team of experts has been serving the community for over <span class="highlight">4 years</span>, transforming homes and businesses with skill and dedication.</p>
+        
+          <h3>Our Mission</h3>
+          <p>Our mission is to enhance the beauty and functionality of your property through high-quality exterior solutions. We aim to exceed your expectations with durable materials, expert craftsmanship, and excellent customer service.</p>
+          
+          <h3 class="our-values">Our Values</h3>
+          <ul class="about-us-benefits">
+            <li><strong>Integrity: </strong>&nbsp;We conduct business with honesty and transparency.</li>
+            <li><strong>Quality:</strong>&nbsp; We prioritize using the best materials and providing top-tier services.</li>
+            <li><strong>Customer-Centric:</strong> &nbsp;We listen to your needs and deliver results that make you happy.</li>
+            <li><strong>Professionalism:</strong> &nbsp;We respect your property and time while providing expert work.</li>
+          </ul>
+        
+          <h3>Meet the Team</h3>
+          <p>Our team is made up of experienced professionals who bring years of expertise and a dedication to craftsmanship. We work together to ensure that each project is completed to the highest standards.</p>
+          
+          <div class="icon-container">
+            <div class="icon-item">
+              <i class="fas fa-tools"></i>
+              <p>Expert Craftsmanship</p>
+            </div>
+            <div class="icon-item">
+              <i class="fas fa-thumbs-up"></i>
+              <p>Customer Satisfaction</p>
+            </div>
+            <div class="icon-item">
+              <i class="fas fa-clock"></i>
+              <p>Timely Service</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="about-image">
+          <img src="src/IMG_2841.jpg" alt="Quality Exterior Solutions">
+          <img src="src/IMG_4725.jpg" alt="Quality Exterior Solutions">
+        </div>
+        
+      </section>
+    
+      
+      <style>
+
+        /* General Mobile Optimization for 413px and below */
+        @media (max-width: 413px) {
+            .about-us {
+                margin-top: 30px;
+                padding-right: 2px;
+            }
+
+            .about-content {
+                max-width: 100%;
+                padding-right: 0; /* Removed extra padding for narrow screens */
+            }
+
+            .about-content h2 {
+                font-size: 2em; /* Reduced for better readability */
+                margin-bottom: 15px;
+            }
+
+            .about-content h3 {
+                font-size: 1.5em; /* Reduced for mobile */
+                margin-top: 20px;
+            }
+
+            .about-content p {
+                font-size: 1em;
+                line-height: 1.4;
+            }
+
+            .about-us-benefits {
+                font-size: 0.9em; /* Adjust font size for readability */
+                margin-bottom: 10px;
+            }
+
+            .about-us-benefits li {
+                margin: 8px 0; /* Smaller margin for compact look */
+            }
+
+            .about-image {
+                align-items: center; /* Center-align images for narrow screens */
+            }
+
+            .about-image img {
+                max-width: 100%; /* Full width on smaller screens */
+                margin-bottom: 15px; /* Reduced spacing */
+            }
+
+            .icon-container {
+                gap: 15px; /* Smaller gap between icons */
+                flex-direction: column; /* Stack icons vertically */
+                align-items: center;
+            }
+
+            .icon-item i {
+                font-size: 1.8em; /* Reduced size */
+            }
+
+            .icon-item p {
+                font-size: 0.9em; /* Reduced text size */
+            }
+
+            .top-bar h4 {
+                font-size: 1rem; /* Adjust font size for smaller screens */
+            }
+
+            .hero-caption h1 {
+                font-size: 1.6rem;
+            }
+
+            .hero-caption h2 {
+                font-size: 1rem;
+            }
+
+            .hero-caption p {
+                font-size: 0.8rem;
+            }
+        }
+
+
+        .about-us-benefits {
+            list-style-type: none;
+            padding: 0;
+            color: #e0e0e0;
+            margin-bottom: 15px;
+            font-size: 1.0em;
+        }
+    
+        .about-us-benefits li {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+    
+        .about-us-benefits li:before {
+            content: "✓";
+            color: #00bfa6; /* Accent color for checkmark */
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        /* About Us Section Styles */
+        .about-us {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          padding: 60px 10%;
+          background-color: #ffffff; /* Slightly lighter background for a modern look */
+          border-radius: 12px;
+          transition: all 0.3s ease;
+          margin-top: 60px;
+        }
+      
+        .about-content {
+          flex: 1;
+          max-width: 90%;
+          padding-right: 0px;
+        }
+      
+        .about-content h2 {
+          font-size: 2.8em;
+          margin-bottom: 20px;
+          color: #003366;
+          font-weight: 700;
+          letter-spacing: 1px;
+        }
+      
+        .about-content h3 {
+          font-size: 1.8em;
+          margin-top: 30px;
+          color: #0056b3;
+          font-weight: 600;
+          letter-spacing: 1px;
+        }
+      
+        .about-content p {
+          font-size: 1.1em;
+          line-height: 1.6;
+          color: #555;
+          margin-bottom: 20px;
+        }
+      
+        .highlight {
+          color: #0056b3;
+          font-weight: bold;
+        }
+      
+        .about-content ul {
+          margin-top: 20px;
+          padding-left: 25px;
+          list-style-type: square;
+          color: #333;
+        }
+      
+        .icon-container {
+          display: flex;
+          gap: 25px;
+          margin-top: 20px;
+          justify-content: space-evenly;
+        }
+      
+        .icon-item {
+          text-align: center;
+          color: #0056b3;
+          transition: transform 0.3s ease, color 0.3s ease;
+        }
+      
+        .icon-item i {
+          font-size: 2.3em;
+          margin-bottom: 10px;
+          transition: color 0.3s ease, transform 0.3s ease;
+        }
+      
+        .icon-item p {
+          font-size: 1em;
+          color: #555;
+          transition: color 0.3s ease;
+        }
+      
+        .icon-item:hover {
+          transform: scale(1.1); /* Slightly zoom effect on hover */
+          color: #003366; /* Darker shade for hover */
+        }
+      
+        .icon-item i:hover {
+          color: #003366; /* Darker shade on hover */
+          transform: scale(1.2); /* Slight zoom effect */
+        }
+      
+        .about-image {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* Align images to the right */
+            margin-left: 15px;
+        }
+
+        .about-image img {
+            max-width: 450px;
+            border-radius: 12px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 25px; /* Space between images */
+        }
+
+      
+        .about-image img:hover {
+          transform: scale(1.05); /* Slight zoom effect */
+        }
+      
+        @media (max-width: 769px) {
+            .about-image {
+                display: none;
+            }
+            .scroll-to-top{
+                display: none;
+            }
+            .about-us-benefits{
+                display:none;
+            }
+            .our-values{
+                display: none;
+            }
+        }
+      </style>
+      
+  
+    <!-------End of About us Section v1.0------->
+    
+    
+    <!-------Start of  Footer v2.0------->
     <footer class="py-5 bg-dark text-white text-center">
         <div class="container">
             <!-- Company Name and Tagline -->

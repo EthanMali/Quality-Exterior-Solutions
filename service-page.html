@@ -18,11 +18,11 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YPQW67JH3P"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    gtag('config', 'G-YPQW67JH3P');
+        gtag('config', 'G-YPQW67JH3P');
     </script>
 </head>
 <body>
@@ -339,9 +339,7 @@
                 </div>
             </div>
             <div class="d-flex justify-content-center py-3">
-                <a href="contact-us.html" class="btn btn-outline-primary fw-bold px-4 py-2" style="text-decoration: none;">
-                    Contact Us
-                </a>
+                <a href="contact-us.html" class="btn btn-outline-primary fw-bold px-4 py-2" style="text-decoration: none;">Contact Us</a>
             </div>
             
         </div>
@@ -428,8 +426,19 @@
             margin-right: 8px;
         }
 
+        li{
+            text-indent: 10px;
+        }
+
         @media (max-width: 768px) {
             .service-image {
+               display: none;
+            }
+
+        }
+
+        @media (max-width: 431px) {
+            .service-benefits {
                display: none;
             }
 

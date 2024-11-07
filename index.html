@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quality Exterior Solutions offers premium siding, gutters, and soffits installation services for homes in Springfield, MO. Contact us for durable, long-lasting solutions.">
+    <meta name="robots" content="index, follow"> <!-- To ensure your page is indexed by search engines -->
+    <meta property="og:title" content="Quality Exterior Solutions">
+    <meta property="og:description" content="Quality Exterior Solutions offers premium siding, gutters, and soffits installation services for homes in Springfield, MO. Contact us for durable, long-lasting solutions.">
+    <meta property="og:image" content="https://yourwebsite.com/path/to/your/image.jpg"> <!-- Optional: Add an image for social media previews -->
+    <meta property="og:url" content="https://yourwebsite.com"> <!-- Your website URL -->
     <title>Quality Exterior Solutions | Springfield, MO</title>
     <link rel="stylesheet" href="css/each-page-style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
@@ -14,33 +20,59 @@
 <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YPQW67JH3P"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    gtag('config', 'G-YPQW67JH3P');
+        gtag('config', 'G-YPQW67JH3P');
     </script>
 
-    <script type="application/ld+json">
-        {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Quality Exterior Solutions",
-        "image": "https://yourwebsite.com/path/to/your/image.jpg",  // Replace with your image URL
-        "telephone": "+1-417-252-7784",  // Replace with your actual phone number
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Springfield",
-            "addressRegion": "MO",
-            "postalCode": "65807",  // Replace with your actual postal code
-            "addressCountry": "US"
-        },
-        "url": "https://yourwebsite.com",  // Replace with your actual website URL
-        "description": "Quality Exterior Solutions provides durable siding, gutters, and soffits for homes. Your trusted partner for quality craftsmanship and lasting results.",
-        "openingHours": "Mo-Fr 08:00-17:00",
-        "priceRange": "$$"  // Indicate your pricing range (e.g., $, $$, $$$)
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Quality Exterior Solutions",
+      "image": "https://yourwebsite.com/path/to/your/image.jpg",  // Replace with your image URL
+      "telephone": "+1-417-252-7784",  // Replace with your actual phone number
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Springfield",
+        "addressRegion": "MO",
+        "postalCode": "65807",  // Replace with your actual postal code
+        "addressCountry": "US"
+      },
+      "url": "https://yourwebsite.com",  // Replace with your actual website URL
+      "description": "Quality Exterior Solutions provides durable siding, gutters, and soffits for homes. Your trusted partner for quality craftsmanship and lasting results.",
+      "openingHours": "Mo-Fr 08:00-17:00",
+      "priceRange": "$$",
+      
+      "paymentAccepted": [
+        "Cash",
+        "Credit Card",
+        "Bank Transfer"  // Add your accepted payment methods
+      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.2085,  // Replace with your actual latitude
+        "longitude": -93.2923  // Replace with your actual longitude
+      },
+      "logo": "https://yourwebsite.com/path/to/logo.jpg",  // Replace with your logo image URL
+      "serviceArea": {
+        "@type": "Place",
+        "name": "Springfield, MO and surrounding areas"  // Service areas for your business
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://yourwebsite.com/offer",  // Replace with the URL for your promotions or special offers
+        "priceCurrency": "USD",
+        "eligibleRegion": {
+          "@type": "Place",
+          "name": "Springfield"
         }
+      }
+    }
     </script>
+    
     
 
     <style>
@@ -375,6 +407,17 @@
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for image */
         }
 
+        @media (max-width: 769px) {
+            .about-image {
+                display: none;
+            }
+            .about-content{
+                max-width: 100%;
+            }
+        }
+
+        
+
       </style>
 
       <!--End of About Us v2-->
@@ -513,7 +556,7 @@
 
         .custom-carousel-control {
             width: 50px;
-            height: auto;
+            height: 50px;
             background-color: rgba(255, 255, 255, 0.8); /* Light background for better contrast */
             border-radius: 50%;
             display: flex;
@@ -521,10 +564,11 @@
             justify-content: center;
             transition: background-color 0.3s ease;
             max-width: 80%;
+            margin-top: 150px;
         }
 
         .custom-carousel-control:hover {
-            background-color: rgba(255, 255, 255, 1);
+            background-color: rgba(255, 255, 255, 0);
         }
 
         .carousel-control-prev-icon,
@@ -610,6 +654,28 @@
         .service-item i:hover {
         color: #003366;
         }
+
+        /*-------Ipone style-------*/
+
+        @media (max-width: 431px) {
+            .service-item {
+                max-width: 85%;
+                text-align: center;
+                align-items: center;
+                margin: 0 auto; /* Centers the element horizontally */
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                margin-bottom: 16px;
+            }
+            .custom-carousel-control{
+                display: none;
+            }
+            .highlight{
+                font-size: 1rem;
+            }
+        }
+
     </style>
     
     <!-- Include Bootstrap JS (make sure it's after jQuery if you're using both) -->
@@ -710,7 +776,6 @@
     </section>
 
     <style>
-        /* Why Choose Us Section Styles */
         .why-choose-us {
             display: flex;
             align-items: center;
@@ -722,10 +787,65 @@
             margin-top: 50px;
         }
 
+        /* Adjust layout for tablet screens */
+        @media (max-width: 769px) {
+            .choose-content {
+                max-width: 70%;
+            }
+            .choose-image {
+                max-width: 20%;
+            }
+        }
+
+        /* Optimize for mobile screens */
+        @media (max-width: 431px) {
+            .why-choose-us {
+                flex-direction: column; /* Stack content vertically */
+                padding: 20px;
+            }
+
+            .choose-image {
+                display: none; /* Hide image on small screens */
+            }
+
+            .choose-content {
+                width: 100%;
+                text-align: center; /* Center text */
+                margin: 0px; /* Remove side margins */
+                padding: 0px;
+            }
+
+            .choose-content h2 {
+                font-size: 1.5em; /* Adjust font size for better readability */
+                margin-bottom: 10px;
+            }
+
+            .choose-content p {
+                font-size: 1em;
+                line-height: 1.4;
+            }
+
+            .icon-container {
+                flex-direction: column; /* Stack icons vertically */
+                gap: 15px; /* Adjust gap */
+                align-items: center;
+                margin-top: 15px;
+            }
+
+            .icon-item i {
+                font-size: 1.5em; /* Reduce icon size */
+                margin-bottom: 5px;
+            }
+
+            .icon-item p {
+                font-size: 0.85em; /* Adjust font size */
+            }
+        }
+
+        /* Desktop styles */
         .choose-image {
             max-width: 30%;
             left: 0%;
-            
         }
 
         .choose-image img {
@@ -780,6 +900,7 @@
         .icon-item i:hover {
             color: #003366;
         }
+
     </style>
 
 
