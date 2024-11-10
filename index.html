@@ -319,7 +319,7 @@
     <section class="about-us" id="about-us"  data-aos="fade-up">
         <div class="about-content">
           <h2>About Us</h2>
-          <p>Welcome to <span class="highlight">Quality Exterior Solutions</span>, where we provide exceptional siding, gutter, and soffit services with a commitment to quality and professionalism. Our team of experts has been serving the community for over <span class="highlight">4 years</span>, transforming homes and businesses with skill and dedication.</p>
+          <p>Welcome to <span class="highlight">Quality Exterior Solutions</span>, where we provide siding, gutter, and soffit services with a commitment to quality. Our team of experts has been serving the community for over <span class="highlight">8 years</span>, transforming homes and businesses with skill and dedication.</p>
           <div class="icon-container">
             <div class="icon-item">
               <i class="fas fa-tools"></i>
@@ -749,7 +749,6 @@
     
 
 
-<!-- Why Choose Us Section -->
     <!-- Why Choose Us Section -->
     <section class="why-choose-us" id="why-choose-us" data-aos="fade-right">
         <div class="choose-image">
@@ -777,6 +776,7 @@
     </section>
 
     <style>
+        /* General styling for Why Choose Us section */
         .why-choose-us {
             display: flex;
             align-items: center;
@@ -786,87 +786,31 @@
             border-radius: 10px;
             transition: box-shadow 0.3s ease;
             margin-top: 50px;
+            gap: 30px; /* Added spacing between image and text */
         }
 
-        /* Adjust layout for tablet screens */
-        @media (max-width: 769px) {
-            .choose-content {
-                max-width: 70%;
-            }
-            .choose-image {
-                max-width: 20%;
-            }
-        }
-
-        /* Optimize for mobile screens */
-        @media (max-width: 431px) {
-            .why-choose-us {
-                flex-direction: column; /* Stack content vertically */
-                padding: 20px;
-            }
-
-            .choose-image {
-                display: none; /* Hide image on small screens */
-            }
-
-            .choose-content {
-                width: 100%;
-                text-align: center; /* Center text */
-                margin: 0px; /* Remove side margins */
-                padding: 0px;
-            }
-
-            .choose-content h2 {
-                font-size: 1.5em; /* Adjust font size for better readability */
-                margin-bottom: 10px;
-            }
-
-            .choose-content p {
-                font-size: 1em;
-                line-height: 1.4;
-            }
-
-            .icon-container {
-                flex-direction: column; /* Stack icons vertically */
-                gap: 15px; /* Adjust gap */
-                align-items: center;
-                margin-top: 15px;
-            }
-
-            .icon-item i {
-                font-size: 1.5em; /* Reduce icon size */
-                margin-bottom: 5px;
-            }
-
-            .icon-item p {
-                font-size: 0.85em; /* Adjust font size */
-            }
-        }
-
-        /* Desktop styles */
         .choose-image {
-            max-width: 30%;
-            left: 0%;
+            max-width: 35%; /* Increase image size for better balance */
         }
 
         .choose-image img {
-            max-width: 100%;
+            width: 100%;
             border-radius: 10px;
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         .choose-content {
-            max-width: 50%;
+            max-width: 60%; /* Increase width for more space */
         }
 
         .choose-content h2 {
-            font-size: 2em;
-            margin-bottom: 15px;
+            font-size: 2.5em; /* Slightly larger heading */
+            margin-bottom: 20px;
             color: #003366;
         }
 
         .choose-content p {
-            font-size: 1.1em;
+            font-size: 1.2em; /* Larger paragraph font size */
             line-height: 1.6;
             color: #333;
         }
@@ -878,7 +822,7 @@
 
         .icon-container {
             display: flex;
-            gap: 20px;
+            gap: 30px; /* Increased gap for more spacing between icons */
             margin-top: 20px;
         }
 
@@ -888,13 +832,13 @@
         }
 
         .icon-item i {
-            font-size: 1.8em;
+            font-size: 2em;
             margin-bottom: 8px;
             transition: color 0.3s ease;
         }
 
         .icon-item p {
-            font-size: 0.9em;
+            font-size: 1em;
             color: #555;
         }
 
@@ -902,7 +846,66 @@
             color: #003366;
         }
 
+        /* Responsive adjustments for tablets */
+        @media (max-width: 769px) {
+            .choose-content {
+                max-width: 70%;
+            }
+            .choose-image {
+                max-width: 25%;
+            }
+        }
+
+        /* Mobile-specific styling for full-width layout */
+        @media (max-width: 431px) {
+            .why-choose-us {
+                flex-direction: column;
+                padding: 20px;
+                margin: 0;
+                width: 100%;
+                max-width: 100%;
+                align-items: center;
+            }
+
+            .choose-image {
+                display: none; /* Hide image on small screens */
+            }
+
+            .choose-content {
+                width: 100%;
+                max-width: 100%;
+                margin: 0;
+                padding: 0 10px; /* Minimal padding for side spacing */
+                text-align: center;
+            }
+
+            .choose-content h2 {
+                font-size: 1.8em;
+                margin-bottom: 15px;
+            }
+
+            .choose-content p {
+                font-size: 1.1em;
+                line-height: 1.6;
+            }
+
+            .icon-container {
+                flex-direction: row;
+                gap: 15px;
+                margin-top: 15px;
+            }
+
+            .icon-item i {
+                font-size: 1.5em;
+            }
+
+            .icon-item p {
+                font-size: 1em;
+            }
+        }
     </style>
+
+
 
 
 
