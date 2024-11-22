@@ -4,6 +4,7 @@ body {
     color: #333333;
     overflow-y: scroll; /* Keeps scroll enabled */
     scrollbar-width: none; /* Firefox */
+    cursor: none;
 
 }
 
