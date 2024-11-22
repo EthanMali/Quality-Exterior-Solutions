@@ -120,7 +120,26 @@
                 padding: 20px;
             }
         }
+        .trail {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: radial-gradient(circle, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0));
+            border-radius: 50%;
+            pointer-events: none;
+            animation: fade-out 1s forwards;
+        }
 
+    @keyframes fade-out {
+        0% {
+            opacity: 1;
+            transform: scale(1);
+      }
+      100% {
+            opacity: 0;
+            transform: scale(2);
+          }
+        }
 
     </style>
 </head>
@@ -1135,6 +1154,25 @@
             duration: 2000, // Animation duration in milliseconds
             once: true // Animates only once when scrolled into view
         });
+    </script>
+    <script>
+        document.addEventListener('mousemove', (e) => {
+          const trail = document.createElement('div');
+          trail.classList.add('trail');
+          
+          // Set position of the trail
+          trail.style.left = `${e.pageX}px`;
+          trail.style.top = `${e.pageY}px`;
+        
+          // Add trail to the body
+          document.body.appendChild(trail);
+        
+          // Remove trail after animation completes
+          setTimeout(() => {
+            trail.remove();
+          }, 1000); // Match the animation duration
+        });
+
     </script>
 
 </body>
