@@ -122,12 +122,13 @@
         }
         .trail {
             position: absolute;
-            width: 10px;
-            height: 10px;
-            background: radial-gradient(circle, rgba(7,3,117,0.8), rgba(7,3,117,0));
+            width: 15px; /* Slightly larger for visibility */
+            height: 15px;
+            background: radial-gradient(circle, rgba(7, 3, 117, 0.9), rgba(7, 3, 117, 0.2));
             border-radius: 50%;
             pointer-events: none;
-            animation: fade-out 1s forwards;
+            box-shadow: 0 0 10px rgba(7, 3, 117, 0.9), 0 0 20px rgba(7, 3, 117, 0.6);
+            animation: fade-out 1.5s ease-out forwards, float 1.5s ease-in-out infinite;
         }
         
         @keyframes fade-out {
@@ -137,9 +138,19 @@
             }
             100% {
                 opacity: 0;
-                transform: scale(2);
+                transform: scale(2.5); /* Slightly larger for an elegant fade */
             }
         }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-2px); /* A slight floating effect */
+            }
+        }
+
 
 
     </style>
@@ -1158,21 +1169,27 @@
     </script>
     <script>
         document.addEventListener('mousemove', (e) => {
-          const trail = document.createElement('div');
-          trail.classList.add('trail');
-          
-          // Set position of the trail
-          trail.style.left = `${e.pageX}px`;
-          trail.style.top = `${e.pageY}px`;
+            const trail = document.createElement('div');
+            trail.classList.add('trail');
+            
+            // Randomize size
+            const size = Math.random() * 15 + 10; // Sizes between 10px and 25px
+            trail.style.width = `${size}px`;
+            trail.style.height = `${size}px`;
         
-          // Add trail to the body
-          document.body.appendChild(trail);
+            // Set position
+            trail.style.left = `${e.pageX}px`;
+            trail.style.top = `${e.pageY}px`;
         
-          // Remove trail after animation completes
-          setTimeout(() => {
-            trail.remove();
-          }, 1000); // Match the animation duration
+            // Add trail to the body
+            document.body.appendChild(trail);
+        
+            // Remove trail after animation completes
+            setTimeout(() => {
+                trail.remove();
+            }, 1500); // Match the animation duration
         });
+
 
     </script>
 
