@@ -124,8 +124,8 @@
             position: absolute;
             width: 20px;
             height: 20px;
-            background: rgba(7,3,117,255, 0.1);
-            border: 2px solidrgba(7,3,117,255, 0.5);
+            background: rgba(7, 3, 117, 0.1); /* Fixed RGBA syntax */
+            border: 2px solid rgba(7, 3, 117, 0.5); /* Added missing space */
             border-radius: 50%;
             pointer-events: none;
             transform: translate(-50%, -50%);
@@ -154,6 +154,7 @@
                 transform: scale(10);
             }
         }
+
         
 
     </style>
