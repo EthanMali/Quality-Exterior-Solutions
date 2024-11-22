@@ -120,29 +120,41 @@
                 padding: 20px;
             }
         }
-        .trail {
+        .cursor {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease-out;
+            z-index: 1000;
+        }
+        
+        .ripple {
             position: absolute;
             width: 10px;
             height: 10px;
-            background: radial-gradient(circle, rgba(0, 170, 255, 1), rgba(0, 170, 255, 0.5));
+            background: rgba(0, 170, 255, 0.5);
             border-radius: 50%;
             pointer-events: none;
-            box-shadow: 0 0 15px rgba(0, 170, 255, 0.8), 0 0 30px rgba(0, 170, 255, 0.4);
-            animation: fade-out 1.5s ease-out forwards;
-            will-change: transform, opacity; /* Optimized rendering */
+            animation: ripple-effect 1s ease-out forwards;
+            z-index: 999;
         }
         
-        /* Keyframes for the fading effect */
-        @keyframes fade-out {
+        @keyframes ripple-effect {
             0% {
                 opacity: 1;
                 transform: scale(1);
             }
             100% {
                 opacity: 0;
-                transform: scale(2);
+                transform: scale(10);
             }
         }
+        
 
     </style>
 </head>
@@ -1159,27 +1171,34 @@
         });
     </script>
     <script>
+        const body = document.body;
+        
+        // Custom Cursor
+        const cursor = document.createElement('div');
+        cursor.classList.add('cursor');
+        body.appendChild(cursor);
+        
+        // Move the cursor element
         document.addEventListener('mousemove', (e) => {
-            const trail = document.createElement('div');
-            trail.classList.add('trail');
-        
-            // Set position of the trail
-            trail.style.left = `${e.pageX}px`;
-            trail.style.top = `${e.pageY}px`;
-        
-            // Randomize size for a dynamic effect
-            const size = Math.random() * 20 + 10; // 10px to 30px
-            trail.style.width = `${size}px`;
-            trail.style.height = `${size}px`;
-        
-            // Add the trail to the document
-            document.body.appendChild(trail);
-        
-            // Remove the trail after the animation
-            setTimeout(() => {
-                trail.remove();
-            }, 1500); // Matches the animation duration
+            cursor.style.left = `${e.pageX}px`;
+            cursor.style.top = `${e.pageY}px`;
         });
+        
+        // Create ripple effect on click
+        document.addEventListener('click', (e) => {
+            const ripple = document.createElement('div');
+            ripple.classList.add('ripple');
+            ripple.style.left = `${e.pageX}px`;
+            ripple.style.top = `${e.pageY}px`;
+        
+            body.appendChild(ripple);
+        
+            // Remove ripple after animation
+            setTimeout(() => {
+                ripple.remove();
+            }, 1000);
+        });
+
 
 
     </script>
