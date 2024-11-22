@@ -124,22 +124,23 @@
             position: absolute;
             width: 10px;
             height: 10px;
-            background: radial-gradient(circle, rgba(7,3,117,255, 0.8), rgba(7,3,117,255));
+            background: radial-gradient(circle, rgba(7,3,117,0.8), rgba(7,3,117,0));
             border-radius: 50%;
             pointer-events: none;
             animation: fade-out 1s forwards;
         }
-
-    @keyframes fade-out {
-        0% {
-            opacity: 1;
-            transform: scale(1);
-      }
-      100% {
-            opacity: 0;
-            transform: scale(2);
-          }
+        
+        @keyframes fade-out {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(2);
+            }
         }
+
 
     </style>
 </head>
