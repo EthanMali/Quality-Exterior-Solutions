@@ -4,6 +4,10 @@ body {
     color: #333333;
     overflow-y: scroll; /* Keeps scroll enabled */
     scrollbar-width: none; /* Firefox */
+    user-select: none; /* Prevent text selection */
+    -webkit-user-drag: none; /* Prevent image dragging in WebKit browsers */
+    -webkit-touch-callout: none; /* Disable context menu on iOS */
+    cursor: default; /* Optional: Ensure a normal cursor */
 
 }
 
